@@ -7,6 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <style>
+        table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #444444;
+  }
+  
+  th {
+    text-align: left;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      font-size: 14px;
+    }
+    th, td {
+      padding: 5px;
+    }
+  }
+  
+    </style>
 </head>
 
 <body>
@@ -17,7 +54,39 @@
 
     <div id="miTabla"></div>
 
-    <script src="./script.js"></script>
+    <script>
+        // Obtener el elemento contenedor donde se creará la tabla
+        const contenedor = document.getElementById("miTabla");
+
+        // Crear la tabla y agregarla al contenedor
+        const tabla = document.createElement("table");
+        contenedor.appendChild(tabla);
+
+        // Crear la fila de encabezado
+        const encabezado = tabla.createTHead();
+        const filaEncabezado = encabezado.insertRow();
+        const encabezadoColumna1 = filaEncabezado.insertCell();
+        const encabezadoColumna2 = filaEncabezado.insertCell();
+
+        // Agregar los títulos de las columnas
+        encabezadoColumna1.textContent = "Columna 1";
+        encabezadoColumna2.textContent = "Columna 2";
+
+        // Obtener los datos para las columnas
+        const datosColumna1 = ["Dato 1", "Dato 2", "Dato 3"];
+        const datosColumna2 = ["Valor 1", "Valor 2", "Valor 3"];
+
+        // Crear filas de datos y agregarlas a la tabla
+        for (let i = 0; i < datosColumna1.length; i++) {
+            const filaDatos = tabla.insertRow();
+            const columna1 = filaDatos.insertCell();
+            const columna2 = filaDatos.insertCell();
+
+            // Agregar los datos a las columnas
+            columna1.textContent = datosColumna1[i];
+            columna2.textContent = datosColumna2[i];
+        }
+    </script>
 </body>
 
 </html>
