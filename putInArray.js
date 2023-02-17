@@ -1,12 +1,16 @@
-const entrada = `Áfidos
+const entrada = `
+Lepidoptera 
+Áfidos
+Phytomyza
+Minadores de la Hoja
+Orugas
 Trips
-Lepidoptera
-Mosca Blanca
+Mosca Blancas
 Chicharrita
 Chinche
+Polilla del Tomate
 Diabroticas
 Piojos harinosos
-Minadores de la Hoja
 `;
 
 const palabras = entrada.split('\n');
