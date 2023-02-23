@@ -1,0 +1,142 @@
+<style>
+    table {
+        border-collapse: collapse;
+        border: #444444 solid 2px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #444444;
+        font-family: serif;
+        padding: 0;
+        margin: auto;
+    }
+
+    thead {
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+        background-color: #f2f2f2;
+        font-weight: bold;
+        border-right: #444444 solid 2px;
+        text-align: center;
+    }
+
+    td {
+        padding-left: 5px;
+        border: none;
+        border-right: #444444 solid 2px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .cabecera {
+        background-color: red;
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            font-size: 14px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+    }
+</style>
+</head>
+
+
+<table id="miTabla">
+    <thead>
+        <tr class="tr">
+            <th COLSPAN="2">Hotalizas</th>
+            <th COLSPAN="2">Berries</th>
+            <th COLSPAN="2">Hierbas aromáticas</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <table style="text-align: center">
+            <br>
+            <tr>
+                <th colspan="2">Plagas Objetivo</th>
+            </tr>
+            <tr>
+                <td>Botrytis cinerea</td>
+                <td>Fusarium sp</td>
+            </tr>
+            <tr>
+                <td>(Botrytis)</td>
+                <td></td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th colspan="2">Dosis / Ha: </th>
+            </tr>
+            <tr style="text-align: center">
+                <td>2-4 ml x 1L de agua</td>
+            </tr>
+            <tr>
+                <td>Pulverizar uniforme y completamente y mezclar con un coadyuvante órgano silicon. Para homogenizar
+                    dispersión es necesario cubrir completamente y uniformemente y ambos lados de la hoja, este producto
+                    es de contacto cero días a corte.</td>
+            </tr>
+           
+        </table>
+    </tbody>
+</table>
+
+<script>
+    // Define los arrays
+    const array1 = ["Brocoli", "Coliflor", "Col de Bruselas", "Tomates", "Tomatillos", "Pimientos", "Sandia", "Melón"
+    ];
+    const array2 = ["Cebollas", "Ajos", "Calabazas", "Calabasita", "Ejotes", "Esparragos", "Maiz Dulce", "Papas"
+];
+    const array3 = ["Arándano Azul", "Arándano Rojo", "Cereza", "Frambuesa", "Fresa", "Fresa Silvestre"];
+    const array4 = ["Fruteilla", "Madronio", "Grocella", "Grocella Negra", "Zarzamora", "Mora"];
+   const array5 = ["Cebollines", "Cominos", "Hierbabuena", "Menta", "Perejil", "Cilantro", "Chaya", "Albahaca"]
+   const array6 = ["Orégano", "Romero", "Laurel", "Verdolaga", "Espinacas", "Acelgas", "Lechugas"]
+
+    // Obtener referencia a la tabla
+    const tabla = document.getElementById('miTabla');
+
+    // Crea un array para almacenar todas las filas de la tabla
+    const filas = [];
+
+      // Recorre los arrays y agrega las filas a la tabla
+    for (let i = 0; i < array1.length; i++) {
+        const fila = [];
+
+        // Agrega el contenido de cada celda a la fila
+        fila.push(array1[i] !== undefined ? array1[i] : '');
+        fila.push(array2[i] !== undefined ? array2[i] : '');
+        fila.push(array3[i] !== undefined ? array3[i] : '');
+        fila.push(array4[i] !== undefined ? array4[i] : '');
+        fila.push(array5[i] !== undefined ? array5[i] : '');
+        fila.push(array6[i] !== undefined ? array6[i] : '');
+       
+
+        // Agrega la fila al array de filas
+        filas.push(fila);
+    }
+
+    // Agrega las filas a la tabla
+    for (let i = 0; i < filas.length; i++) {
+        const fila = filas[i];
+        const row = tabla.insertRow();
+        for (let j = 0; j < fila.length; j++) {
+            const celda = row.insertCell();
+            const texto = document.createTextNode(fila[j]);
+            celda.appendChild(texto);
+        }
+    }
+</script>

@@ -1,16 +1,11 @@
 const entrada = `
-Lepidoptera 
-Áfidos
-Phytomyza
-Minadores de la Hoja
-Orugas
-Trips
-Mosca Blancas
-Chicharrita
-Chinche
-Polilla del Tomate
-Diabroticas
-Piojos harinosos
+Orégano
+Romero
+Laurel
+Verdolaga
+Espinacas
+Acelgas
+Lechugas
 `;
 
 const palabras = entrada.split('\n');

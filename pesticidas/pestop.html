@@ -1,0 +1,119 @@
+
+<style>
+       
+    table {
+        border-collapse: collapse;
+        border: #444444 solid 2px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #444444;
+        font-family: serif;
+        padding: 0;
+        margin: auto;
+    }
+    thead {
+        width: 100%;
+    }
+ 
+    th {
+        text-align: left;
+        background-color: #f2f2f2;
+        font-weight: bold;
+        border-right: #444444 solid 2px;
+        text-align: center;
+    }
+
+    td {
+       padding-left: 5px;
+       border: none;
+        border-right: #444444 solid 2px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+    .cabecera {
+        background-color: red;
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            font-size: 14px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+    }
+</style>
+</head>
+
+
+<table id="miTabla">
+    <thead>
+        <tr class="tr">
+            <th COLSPAN="2">Hortalizas</th>
+            <th COLSPAN="2">Berries</th>
+            <th COLSPAN="2">Hierbas Aromáticas</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+    // Define los arrays
+    const array1 = ["Brocoli", "Coliflor", "Col de Bruselas", "Tomates", "Tomatillos",
+        "Pimientos", "Sandia", "Melón", "Cebollas", "Ajos", "Calabazas", "Calabasita", "Ejotes", "Esparragos", "Maiz Dulce"
+    ];
+    const array2 = ["Palomilla dorso de diamante", "Cogollero del maíz", "Áfidos", "Trips", "Mosca Blancas",
+        "Chicharrita", "Chinche", "Polilla del Tomate", "Diabroticas", "Piojos harinosos", "Polilla del Tomate", "Phytomyza", "Minadores de la Hoja"
+    ];
+    const array3 = ["Arándano Azul", "Arándano Rojo", "Cereza", "Frambuesa", "Fresa", "Fresa Silvestre", "Fruteilla", "Madronio", "Grocella",
+        "Grocella Negra", "Zarzamora", "Mora", "", "", ""];
+    const array4 = ["Áfidos", "Trips", "Lepidoptera", "Mosca Blanca", "Chicharrita", "Chinche", "Diabroticas", "Piojos harinosos", "Minadores de la Hoja", ""];
+    const array5 = ["Cebollines", "Cominos", "Hierbabuena", "Menta", "Perejil", "Cilantro",
+        "Chaya", "Albahaca", "Orégano", "Romero", "Laurel", "Verdolaga", "Espinacas", "Acelgas", "Lechugas"];
+    const array6 = ["Lepidoptera ", "Áfidos", "Phytomyza", "Minadores de la Hoja", "Orugas", "Trips", "Mosca Blancas", "Chicharrita", "Chinche", "Polilla del Tomate", "Diabroticas", "Piojos harinosos", "", "", ""];
+
+    // Obtener referencia a la tabla
+    const tabla = document.getElementById('miTabla');
+
+    // Crea un array para almacenar todas las filas de la tabla
+    const filas = [];
+
+    // Agrega la cabecera al array de filas
+    const cabecera = ['Planta', 'Pestes objetivo', 'Planta', 'Pestes objetivo', 'Planta', 'Pestes Objetivo'];
+    filas.push(cabecera);
+
+    // Recorre los arrays y agrega las filas a la tabla
+    for (let i = 0; i < array1.length; i++) {
+        const fila = [];
+
+        // Agrega el contenido de cada celda a la fila
+        fila.push(array1[i] !== undefined ? array1[i] : '');
+        fila.push(array2[i] !== undefined ? array2[i] : '');
+        fila.push(array3[i] !== undefined ? array3[i] : '');
+        fila.push(array4[i] !== undefined ? array4[i] : '');
+        fila.push(array5[i] !== undefined ? array5[i] : '');
+        fila.push(array6[i] !== undefined ? array6[i] : '');
+
+        // Agrega la fila al array de filas
+        filas.push(fila);
+    }
+
+    // Agrega las filas a la tabla
+    for (let i = 0; i < filas.length; i++) {
+        const fila = filas[i];
+        const row = tabla.insertRow();
+        for (let j = 0; j < fila.length; j++) {
+            const celda = row.insertCell();
+            const texto = document.createTextNode(fila[j]);
+            celda.appendChild(texto);
+        }
+    }
+</script>
