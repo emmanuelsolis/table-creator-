@@ -20,14 +20,15 @@
         text-align: left;
         background-color: #f2f2f2;
         font-weight: bold;
-        border-right: #444444 solid 2px;
         text-align: center;
+        border-right: solid 0.5px #444444;
     }
 
     td {
         padding-left: 5px;
         border: none;
-        border-right: #444444 solid 2px;
+        border-right: solid 0.5px #444444;
+        border-bottom: dashed 0.5px #9999;
     }
 
     tr:hover {
@@ -54,67 +55,171 @@
 
 
 <table id="miTabla">
-    <thead>
-        <tr class="tr">
-            <th COLSPAN="2">Hortalizas y frutales</th>
-            <th COLSPAN="2">Berries y citricos</th>
-            <th COLSPAN="2">Hierbas Aromáticas y flores</th>
-        </tr>
-    </thead>
+
     <tbody>
+        <br>
+        <table>
+            <tr>
+                <th colspan="2">Cultivos</th>
+                <th>Métodos de aplicación</th>
+                <th>Dosis/Ha</th>
+            </tr>
+            <tr>
+                <td colspan="2">Aguacatero</td>
+                <td rowspan="3">Queresas</td>
+                <td rowspan="15" style="text-align: center;">2 - 4 ml
+                    x 1Lt. Agua</td>
+            </tr>
+            <tr>
+                <td colspan="2">Algodonero</td>
+            </tr>
+            <tr>
+                <td colspan="2">Apio</td>
+            </tr>
+            <tr>
+                <td>Chile</td>
+                <td>Pimiento morron</td>
+                <td rowspan="3">Tetranychus urticae</td>
+            </tr>
+            <tr>
+                <td>Chile Bell</td>
+                <td>Tomate de cáscara</td>
+            </tr>
+            <tr>
+                <td>Berenjena</td>
+                <td>Tomate</td>
+            </tr>
+            <tr>
+                <td>Papa</td>
+                <td>Jitomate</td>
+                <td rowspan="3">Aleyrodidae</td>
+            </tr>
+            <tr>
+                <td>Fresa</td>
+                <td>Frambuesa</td>
+            </tr>
+            <tr>
+                <td>Arándano</td>
+                <td>Zarzamora</td>
+            </tr>
+            <tr>
+                <td>Grocella</td>
+                <td>Fruteilla</td>
+                <td rowspan="2">Pseudococcidos</td>
+            </tr>
+            <tr>
+                <td>Arándano Azul</td>
+                <td>Madronio</td>
+            </tr>
+            <tr>
+                <td>Arándano Rojo</td>
+                <td>Grocella Negra</td>
+                <td rowspan="2">Bemisia tabaci</td>
+            </tr>
+            <tr>
+                <td>Cereza</td>
+                <td>Mora</td>
+            </tr>
+            <tr>
+                <td colspan="2">Fresa Silvestre</td>
+                <td rowspan="3">Planococcus ficus</td>
+            </tr>
+            <tr>
+                <td>Calabacita</td>
+                <td>Pepino</td>
+            </tr>
+            <tr>
+                <td>Calabaza</td>
+                <td>Melón</td>
+                <td>Pulverizar uniforme y
+                    completamente</td>
+            </tr>
+            <tr>
+                <td>Chayote</td>
+                <td>Sandía</td>
+                <td rowspan="3">Aleurodicus juleikae</td>
+                <td rowspan="3">Y mezclas con un coadyuvante organo silicon <br>
+                    Para homogeneizar la dispersión
+                </td>
+            </tr>
+            <tr>
+                <td>Manzano</td>
+                <td>Peral</td>
+            </tr>
+            <tr>
+                <td>Maíz </td>
+                <td>Sorgo</td>
+            </tr>
+            <tr>
+                <td>Cítricos</td>
+                <td>Limón italiano</td>
+                <td rowspan="3">Panonychus citri</td>
+                <td rowspan="2">Es necesario cubrir
+                    completamente y</td>
+            </tr>
+            <tr>
+                <td>Limón</td>
+                <td>Lima</td>
+            </tr>
+            <tr>
+                <td>Naranja</td>
+                <td>Toronja</td>
+                <td>uniformemente ambos
+                    lados de la hoja</td>
+            </tr>
+            <tr>
+                <td>Rosal</td>
+                <td>Arbustos</td>
+                <td rowspan="13">Oligonychus spp</td>
+                <td>Este producto es de contacto</td>
+            </tr>
+            <tr>
+                <td>Clavel</td>
+                <td>Flores en general</td>
+                <td rowspan="11">Cero días a corte</td>
+            </tr>
+            <tr>
+                <td colspan="2">Gerbera</td>
+            </tr>
+            <tr>
+                <td colspan="2">Papayo</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cebollines</td>
+                <td>Orégano</td>
+
+            </tr>
+            <tr>
+                <td>Cominos</td>
+                <td>Romero</td>
+            </tr>
+            <tr>
+                <td>Hierbabuena</td>
+                <td>Laurel</td>
+            </tr>
+            <tr>
+                <td>Menta</td>
+                <td>Verdolaga</td>
+            </tr>
+            <tr>
+                <td>Perejil</td>
+                <td>Espinacas</td>
+            </tr>
+            <tr>
+                <td>Cilantro</td>
+                <td>Acelgas</td>
+            </tr>
+            <tr>
+                <td>Chaya</td>
+                <td>Lechugas</td>
+            </tr>
+            <tr>
+                <td>Albahaca</td>
+                <td></td>
+            </tr>
+
+        </table>
+
     </tbody>
 </table>
-
-<script>
-    // Define los arrays
-    const array1 = ["Chile", "Chile bell", "Berenjena", "Papa", "Brocoli", "Coliflor", "Col de Bruselas",
-     "Tomatillos", "Cebollas", "Pimiento morron", "Tomate de cascara", "Tomate", "Jitomate", "Ajos", 
-     "Ejotes", "Esparragos", "Maiz Dulce", "Apio", "Calabacita", "Calabaza", "Chayote", "Manzano Peral", 
-     "Pepino", "Melón", "Sandia", "Papayo", "Aguacatero"
-    ];
-    const array2 = ["Queresas","Tetranychus urticae","Aleyrodidae","Pseudococcidos","Bemisia tabaci","Planococcus ficus","Aleurodicus juleikae","Panonychus citri","Oligonychus spp"
-    ];
-    const array3 = ["Fresa", "Arándano", "Grocella", "Arándano Azul", "Arándano Rojo", "Cereza", "Fresa Silvestre", "Frambuesa", "Zarzamora", "Fruteilla", "Madronio", "Grocella Negra", "Mora", "Limón italiano", "Lima", "Toronja", "Cítricos", "Limón", "Naranja"];
-    const array4 = ["Queresas","Tetranychus urticae","Aleyrodidae","Pseudococcidos","Bemisia tabaci","Planococcus ficus","Aleurodicus juleikae","Panonychus citri","Oligonychus spp"];
-    const array5 = ["Algodonero","Rosal", "Clavel", "Gerbera", "Arbustos", "Flores en general", "Cebollines", "Cominos", 
-    "Hierbabuena", "Menta", "Perejil", "Cilantro", "Chaya", "Albahaca", "Orégano", "Romero", "Laurel", 
-    "Verdolaga", "Espinacas", "Acelgas", "Lechugas"];
-    const array6 = ["Queresas","Tetranychus urticae","Aleyrodidae","Pseudococcidos","Bemisia tabaci","Planococcus ficus","Aleurodicus juleikae","Panonychus citri","Oligonychus spp"];
-
-    // Obtener referencia a la tabla
-    const tabla = document.getElementById('miTabla');
-
-    // Crea un array para almacenar todas las filas de la tabla
-    const filas = [];
-
-    // Agrega la cabecera al array de filas
-    const cabecera = ['Planta', 'Pestes objetivo', 'Planta', 'Pestes objetivo', 'Planta', 'Pestes Objetivo'];
-    filas.push(cabecera);
-
-    // Recorre los arrays y agrega las filas a la tabla
-    for (let i = 0; i < array1.length; i++) {
-        const fila = [];
-
-        // Agrega el contenido de cada celda a la fila
-        fila.push(array1[i] !== undefined ? array1[i] : '');
-        fila.push(array2[i] !== undefined ? array2[i] : '');
-        fila.push(array3[i] !== undefined ? array3[i] : '');
-        fila.push(array4[i] !== undefined ? array4[i] : '');
-        fila.push(array5[i] !== undefined ? array5[i] : '');
-        fila.push(array6[i] !== undefined ? array6[i] : '');
-
-        // Agrega la fila al array de filas
-        filas.push(fila);
-    }
-
-    // Agrega las filas a la tabla
-    for (let i = 0; i < filas.length; i++) {
-        const fila = filas[i];
-        const row = tabla.insertRow();
-        for (let j = 0; j < fila.length; j++) {
-            const celda = row.insertCell();
-            const texto = document.createTextNode(fila[j]);
-            celda.appendChild(texto);
-        }
-    }
-</script>
