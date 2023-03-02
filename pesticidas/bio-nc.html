@@ -9,6 +9,7 @@
         color: #444444;
         font-family: serif;
         padding: 0;
+        margin: auto;
     }
 
     thead {
@@ -38,18 +39,15 @@
     }
 
     @media screen and (max-width: 600px) {
-        #miTabla {
-            font-size: 90%;
-            width: 90%;
+        table {
+            font-size: 14px;
+            width: 100%;
         }
-         td {
-             padding-left: 1%;
-       
-         }
-         tr:hover {
-               background-color: #f5f5f5;
-         }
-        
+
+        th,
+        td {
+            padding: 5px;
+        }
     }
 </style>
 </head>
@@ -58,41 +56,22 @@
 <table id="miTabla">
     <thead>
         <tr class="tr">
-            <th COLSPAN="2">Hotalizas</th>
-            <th COLSPAN="2">Berries</th>
-            <th COLSPAN="2">Hierbas aromáticas</th>
+            <th >Cultivos</th>
+            <th >Plaga</th>
+            <th >Dosis por ha/aplicación</th>
         </tr>
     </thead>
     <tbody>
-        
-        
-        <table style="text-align: center" id="miTabla">
-            <br>
-            <tr>
-                <th colspan="2">Dosis / Ha: </th>
-            </tr>
-            <tr >
-                <td>500g / Ha. a 200g / Ha</td>
-            </tr>
-            <tr>
-                <td>Puede ingresar inmediatamente después de haber realizado
-                    la aplicación sin problema.</td>
-            </tr>
-           
-        </table>
     </tbody>
 </table>
 
 <script>
     // Define los arrays
-    const array1 = ["Brocoli", "Coliflor", "Col de Bruselas", "Tomates", "Tomatillos", "Pimientos", "Sandia", "Melón"
-    ];
-    const array2 = ["Cebollas", "Ajos", "Calabazas", "Calabasita", "Ejotes", "Esparragos", "Maiz Dulce", "Papas"
+    const array1 = ["Berenjena", "Jitomate", "Papa", "Tabaco", "Tomate de cáscara", "Melón Calabaza", "Chilacayote", "Pepino", "Sandía", "Chayote", "Calabacita", "Banano", "Limón", "Cebolla", "Higo", "Naranja", "Chile", "Chile bell", "Vid"];
+    const array2 = ["Nematodo agallador", "Nematodo nodulador (Meloidogyne incognita)", "Nematodo de los bulbos (Ditylenchus dipsaci)", "Nematodo de los cítricos(Tylenchulus semipenetrans)", "Nematodo de la soya (Heterodera glycines)", "Nematodo de la Palma Coco (Rhadinaphelenchus cocophyllus)", "Nematodo barrenador (Rhadopholus similis)", "Nematodo dorado de la papa (Globodera rostochiensis)", "(Meloidogyne Enterolobii SP)", "(Pratylenchus SP)"
 ];
-    const array3 = ["Arándano Azul", "Arándano Rojo", "Cereza", "Frambuesa", "Fresa", "Fresa Silvestre"];
-    const array4 = ["Fruteilla", "Madronio", "Grocella", "Grocella Negra", "Zarzamora", "Mora"];
-   const array5 = ["Cebollines", "Cominos", "Hierbabuena", "Menta", "Perejil", "Cilantro", "Chaya", "Albahaca"]
-   const array6 = ["Orégano", "Romero", "Laurel", "Verdolaga", "Espinacas", "Acelgas", "Lechugas"]
+    const array3 = ["","","","","","300-500 g/ha","", "(Repetir a los 30 días de plantado)"];
+   
 
     // Obtener referencia a la tabla
     const tabla = document.getElementById('miTabla');
@@ -108,9 +87,7 @@
         fila.push(array1[i] !== undefined ? array1[i] : '');
         fila.push(array2[i] !== undefined ? array2[i] : '');
         fila.push(array3[i] !== undefined ? array3[i] : '');
-        fila.push(array4[i] !== undefined ? array4[i] : '');
-        fila.push(array5[i] !== undefined ? array5[i] : '');
-        fila.push(array6[i] !== undefined ? array6[i] : '');
+       
        
 
         // Agrega la fila al array de filas

@@ -5,11 +5,15 @@
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
-        font-size: 16px;
+        font-size: 14px;
         color: #444444;
         font-family: serif;
         padding: 0;
         margin: auto;
+    }
+
+    .linea {
+        border-top: dotted 0.5px #444444;
     }
 
     thead {
@@ -28,7 +32,7 @@
         padding-left: 5px;
         border: none;
         border-right: solid 0.5px #444444;
-        border-bottom: dashed 0.5px #9999;
+        /*border-bottom: dashed 0.5px #9999;*/
     }
 
     tr:hover {
@@ -41,7 +45,7 @@
 
     @media screen and (max-width: 600px) {
         table {
-            font-size: 14px;
+            font-size: 12px;
             width: 100%;
         }
 
@@ -54,33 +58,35 @@
 </head>
 
 
-
 <table id="miTabla">
     <tr>
         <th colspan="2">Cultivos</th>
-        <th>Métodos de aplicación</th>
-        <th>Dosis/Ha</th>
+        <th>Pestes Objetivo</th>
+        <th>Dosis  ml. / Lt. agua</th>
     </tr>
+    <tr class="linea"><td></td></tr>
     <tr>
         <td colspan="2">Aguacatero</td>
-        <td rowspan="3">Queresas</td>
-        <td rowspan="15" style="text-align: center;">2 - 4 ml
-            x 1Lt. Agua</td>
+        <td rowspan="10"></td>
+    <td rowspan="44">1 - 2 ml
+        x 1Lt. Agua</td>
+   </tr>
+   <tr><td class="linea" colspan="2"></td></tr>
+   <tr>
+       <td colspan="2">Algodonero</td>
+       <tr><td class="linea" colspan="2"></td></tr>
+   </tr>
+   <tr>
+    <td colspan="2">Apio</td>
+   </tr>
+   <tr><td class="linea" colspan="2"></td></tr>
+   <tr>
+       <td>Chile</td>
+       <td>Pimiento morron</td>
     </tr>
     <tr>
-        <td colspan="2">Algodonero</td>
-    </tr>
-    <tr>
-        <td colspan="2">Apio</td>
-    </tr>
-    <tr>
-        <td>Chile</td>
-        <td>Pimiento morron</td>
-        <td rowspan="3">Tetranychus urticae</td>
-    </tr>
-    <tr>
-        <td>Chile Bell</td>
-        <td>Tomate de cáscara</td>
+        <td>Chile bell</td>
+        <td>Tomate cáscara</td>
     </tr>
     <tr>
         <td>Berenjena</td>
@@ -89,70 +95,99 @@
     <tr>
         <td>Papa</td>
         <td>Jitomate</td>
-        <td rowspan="3">Aleyrodidae</td>
     </tr>
+    <tr>
+        <td>Brócoli</td>
+        <td>Ajos</td>
+        <td>Thrip Sp.</td>
+    </tr>
+    <tr>
+        <td>Coliflor</td>
+        <td>Ejotes</td>
+        <td>Thrip de Palma</td>
+    </tr>
+    <tr>
+        <td>Col de Bruselas</td>
+        <td>Espárragos</td>
+        <td>Thrip de flores</td>
+    </tr>
+    <tr>
+        <td>Tomatillos</td>
+        <td>Maiz dulce</td>
+        <td>Thrip de jardin</td>
+    </tr>
+    <tr>
+        <td>Cebollas</td>
+        <td></td>
+        <td>Thrip de cebolla</td>
+    </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td>Fresa</td>
         <td>Frambuesa</td>
+        <td>Arañas</td>
     </tr>
     <tr>
         <td>Arándano</td>
         <td>Zarzamora</td>
+        <td>Araña de dos puntos</td>
     </tr>
     <tr>
         <td>Grocella</td>
         <td>Fruteilla</td>
-        <td rowspan="2">Pseudococcidos</td>
+        <td>Araña de citricos</td>
     </tr>
     <tr>
         <td>Arándano Azul</td>
         <td>Madronio</td>
+        <td>Araña roja</td>
     </tr>
     <tr>
         <td>Arándano Rojo</td>
         <td>Grocella Negra</td>
-        <td rowspan="2">Bemisia tabaci</td>
+        <td>Acaro Blanco</td>
     </tr>
     <tr>
         <td>Cereza</td>
         <td>Mora</td>
+        <td>Araña ciclamina</td>
     </tr>
     <tr>
-        <td colspan="2">Fresa Silvestre</td>
-        <td rowspan="3">Planococcus ficus</td>
+        <td>Fresa Silvestre</td>
+        <td></td>
+        <td>Aphidos</td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td>Calabacita</td>
         <td>Pepino</td>
+        <td>Pulgon de los cultivos</td>
     </tr>
     <tr>
         <td>Calabaza</td>
         <td>Melón</td>
-        <td>Pulverizar uniforme y
-            completamente</td>
+        <td>Frankliniella Occidentalis</td>
     </tr>
     <tr>
         <td>Chayote</td>
         <td>Sandía</td>
-        <td rowspan="3">Aleurodicus juleikae</td>
-        <td rowspan="3">Y mezclas con un coadyuvante organo silicon <br>
-            Para homogeneizar la dispersión
-        </td>
+        <td>Thrips tabaci</td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td>Manzano</td>
         <td>Peral</td>
+        <td rowspan="22"></td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
-        <td>Maíz </td>
+        <td>Maíz</td>
         <td>Sorgo</td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td>Cítricos</td>
         <td>Limón italiano</td>
-        <td rowspan="3">Panonychus citri</td>
-        <td rowspan="2">Es necesario cubrir
-            completamente y</td>
     </tr>
     <tr>
         <td>Limón</td>
@@ -161,30 +196,28 @@
     <tr>
         <td>Naranja</td>
         <td>Toronja</td>
-        <td>uniformemente ambos
-            lados de la hoja</td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td>Rosal</td>
         <td>Arbustos</td>
-        <td rowspan="12">Oligonychus spp</td>
-        <td>Este producto es de contacto</td>
     </tr>
     <tr>
         <td>Clavel</td>
         <td>Flores en general</td>
-        <td rowspan="11">Cero días a corte</td>
     </tr>
     <tr>
-        <td colspan="2">Gerbera</td>
+        <td>Gerbera</td>
+        <td></td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td colspan="2">Papayo</td>
     </tr>
+    <tr><td class="linea" colspan="2"></td></tr>
     <tr>
         <td>Cebollines</td>
         <td>Orégano</td>
-
     </tr>
     <tr>
         <td>Cominos</td>
@@ -214,5 +247,8 @@
         <td>Albahaca</td>
         <td></td>
     </tr>
+
+
+
 
 </table>
