@@ -1,0 +1,107 @@
+<style>
+    table {
+        border-collapse: collapse;
+        border: #444444 solid 2px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #444444;
+        font-family: serif;
+        padding: 0;
+        margin: auto;
+    }
+
+    thead {
+        width: 100%;
+    }
+
+    th {
+        text-align: left;
+        background-color: #f2f2f2;
+        font-weight: bold;
+        border-right: #444444 solid 2px;
+        text-align: center;
+    }
+
+    td {
+        padding-left: 5px;
+        border: none;
+        border-right: #444444 solid 2px;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .cabecera {
+        background-color: red;
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            font-size: 14px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+    }
+</style>
+</head>
+
+
+<table id="miTabla">
+    <thead>
+        <tr class="tr">
+            <th >Cultivos</th>
+            <th >Plaga</th>
+            <th >Dosis por ha/aplicación</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+    // Define los arrays
+    const array1 = ["Berenjena", "Jitomate", "Papa", "Tabaco", "Tomate de cáscara", "Melón Calabaza", "Chilacayote", "Pepino", "Sandía", "Chayote", "Calabacita", "Banano", "Limón", "Cebolla", "Higo", "Naranja", "Chile", "Chile bell", "Vid"];
+    const array2 = ["Nematodo agallador", "Nematodo nodulador (Meloidogyne incognita)", "Nematodo de los bulbos (Ditylenchus dipsaci)", "Nematodo de los cítricos(Tylenchulus semipenetrans)", "Nematodo de la soya (Heterodera glycines)", "Nematodo de la Palma Coco (Rhadinaphelenchus cocophyllus)", "Nematodo barrenador (Rhadopholus similis)", "Nematodo dorado de la papa (Globodera rostochiensis)", "(Meloidogyne Enterolobii SP)", "(Pratylenchus SP)"
+];
+    const array3 = ["","","","","","300-500 g/ha","", "(Repetir a los 30 días de plantado)"];
+   
+
+    // Obtener referencia a la tabla
+    const tabla = document.getElementById('miTabla');
+
+    // Crea un array para almacenar todas las filas de la tabla
+    const filas = [];
+
+      // Recorre los arrays y agrega las filas a la tabla
+    for (let i = 0; i < array1.length; i++) {
+        const fila = [];
+
+        // Agrega el contenido de cada celda a la fila
+        fila.push(array1[i] !== undefined ? array1[i] : '');
+        fila.push(array2[i] !== undefined ? array2[i] : '');
+        fila.push(array3[i] !== undefined ? array3[i] : '');
+       
+       
+
+        // Agrega la fila al array de filas
+        filas.push(fila);
+    }
+
+    // Agrega las filas a la tabla
+    for (let i = 0; i < filas.length; i++) {
+        const fila = filas[i];
+        const row = tabla.insertRow();
+        for (let j = 0; j < fila.length; j++) {
+            const celda = row.insertCell();
+            const texto = document.createTextNode(fila[j]);
+            celda.appendChild(texto);
+        }
+    }
+</script>
